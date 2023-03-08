@@ -32,7 +32,7 @@ const { ethers } = require("ethers");
 */
 
 /// 📡 What chain are your contracts deployed to?
-const initialNetwork = NETWORKS.mainnet;
+const initialNetwork = NETWORKS.avalanche;
 
 const USE_BURNER_WALLET = process.env.REACT_APP_BURNER_WALLET ?? false;
 
