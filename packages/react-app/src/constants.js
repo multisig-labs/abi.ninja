@@ -3,6 +3,7 @@ export const RPC_POLL_TIME = 30000;
 // MY INFURA_ID, SWAP IN YOURS FROM https://infura.io/dashboard/ethereum
 export const INFURA_ID = process.env.REACT_APP_INFURA_KEY ?? "460f40a260564ac4a4f4b3fffb032dad";
 
+const SNOWTRACE_API_KEY = process.env.REACT_APP_SNOWTRACE_API;
 const ETHERSCAN_API_KEY = process.env.REACT_APP_ETHERSCAN_API_KEY;
 const POLYGONSCAN_API_KEY = process.env.REACT_APP_POLYGONSCAN_API_KEY;
 
@@ -18,6 +19,33 @@ export const NETWORKS = {
     chainId: 31337,
     blockExplorer: "",
     rpcUrl: "http://127.0.0.1:8545/",
+  },
+  avalanche: {
+    name: "avalanche-mainnet",
+    color: "#ff8b6e",
+    chainId: 43114,
+    rpcUrl: "https://api.avax.network/ext/bc/C/rpc",
+    blockExplorer: "https://snowtrace.io/",
+    etherscanEndpoint: "https://api.snowtrace.io/",
+    apiKey: SNOWTRACE_API_KEY,
+  },
+  fuji: {
+    name: "fuji",
+    color: "#ff6b6e",
+    chainId: 43113,
+    rpcUrl: "https://api.avax-test.network/ext/bc/C/rpc",
+    blockExplorer: "https://testnet.snowtrace.io/",
+    etherscanEndpoint: "https://api-testnet.snowtrace.io/",
+    apiKey: SNOWTRACE_API_KEY,
+  },
+  ANR: {
+    name: "anr",
+    color: "#ff6b0e",
+    chainId: 43112,
+    rpcUrl: "https://anr.fly.dev/ext/bc/C/rpc",
+    blockExplorer: "",
+    etherscanEndpoint: "",
+    apiKey: "",
   },
   mainnet: {
     name: "mainnet",
